@@ -1,0 +1,380 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "7f0e1358-524a-4548-b6e4-a1834aea6557",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create a new product.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"iexapcvkszdhxwlcqdeqdkwlrhviueukyioaonoumaxmccao\",\"price\":37213452.272934,\"category\":\"cpxxadahqlfcrsetlttrnlpmwtzaldyqnvrehrpqzgmizpybqegpodkcmfhgwppfpgcfqyejtsrzeqbynktefbvovmgeszojrsyeqfamikkyaberqtkktgefhpqtjkzryxtchbqspqaiqbiwrwbyebqduwnhfgubxungftxpflzrsaznt\",\"description\":\"iwuccbumrycygecsgrbxqjhtrzmezxtpzvlbcucvuaowrthyqoounmphsyfuyiklfntvlvymqjsqlswrwnrrfjzvdaaemsxxoihojxvemqrwzovdtgqnwbudzonakromvhcyejuryctzhawgnkhkohvcjjfbpeuslwyfmlnreumslyrbvprwzzxqtrpawobakuxmmmzmxqbiqezgnhkhermookrcvglqfcqoujozlcdfuqcsykipfanwoccwxksagctmzzu\",\"avatar\":\"bftgfjvxqtotoftjxrztcdnzfwd\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specific Product.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a Cart of a guest or auth user.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"success\":false,\"message\":\"Error in fetching cart.\",\"data\":{\"session_id\":[\"The session id field is required.\"]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Add specific item to cart for guest and auth user.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"session_id\":\"gmgxybidkytdvlsgebqdkdueitxtqgfcgfzzczytmalv\",\"product_id\":3.5,\"qty\":1851.5}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified Cart Items by CartId.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the cart."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"qty\":14534089.6}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified cart item from cart.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The ID of the cart."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the Products.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Default pagination is used.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"data\":{\"current_page\":1,\"data\":[{\"id\":2,\"name\":\"sdsf\",\"price\":10,\"category\":\"sadas\",\"description\":\"sadsds\",\"avatar\":null,\"created_at\":\"2022-06-27T09:27:49.000000Z\",\"updated_at\":\"2022-06-27T09:27:49.000000Z\",\"deleted_at\":null},{\"id\":3,\"name\":\"sdsf\",\"price\":10,\"category\":\"sadas\",\"description\":\"fdsf\",\"avatar\":null,\"created_at\":\"2022-06-27T10:35:30.000000Z\",\"updated_at\":\"2022-06-27T10:35:30.000000Z\",\"deleted_at\":null},{\"id\":4,\"name\":\"sdsf\",\"price\":10,\"category\":\"sadas\",\"description\":\"fdsf\",\"avatar\":null,\"created_at\":\"2022-06-27T10:35:46.000000Z\",\"updated_at\":\"2022-06-27T10:35:46.000000Z\",\"deleted_at\":null}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/products?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/products?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/products?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/products\",\"per_page\":10,\"prev_page_url\":null,\"to\":3,\"total\":3},\"message\":\"\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create a new controller instance.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"modi\",\"password\":\"neque\"}"
+                        },
+                        "description": "* Default user added\n\nuser: k@yopmail.com\n\nPassword: case@study",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

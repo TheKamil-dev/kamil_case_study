@@ -1,0 +1,474 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/products:
+    post:
+      summary: 'Create a new product.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: iexapcvkszdhxwlcqdeqdkwlrhviueukyioaonoumaxmccao
+                price:
+                  type: number
+                  description: ''
+                  example: 37213452.272934
+                category:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: cpxxadahqlfcrsetlttrnlpmwtzaldyqnvrehrpqzgmizpybqegpodkcmfhgwppfpgcfqyejtsrzeqbynktefbvovmgeszojrsyeqfamikkyaberqtkktgefhpqtjkzryxtchbqspqaiqbiwrwbyebqduwnhfgubxungftxpflzrsaznt
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: iwuccbumrycygecsgrbxqjhtrzmezxtpzvlbcucvuaowrthyqoounmphsyfuyiklfntvlvymqjsqlswrwnrrfjzvdaaemsxxoihojxvemqrwzovdtgqnwbudzonakromvhcyejuryctzhawgnkhkohvcjjfbpeuslwyfmlnreumslyrbvprwzzxqtrpawobakuxmmmzmxqbiqezgnhkhermookrcvglqfcqoujozlcdfuqcsykipfanwoccwxksagctmzzu
+                avatar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: bftgfjvxqtotoftjxrztcdnzfwd
+              required:
+                - name
+                - price
+                - category
+                - description
+      security: []
+    get:
+      summary: 'Display a listing of the Products.'
+      description: 'Default pagination is used.'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 2
+                        name: sdsf
+                        price: 10
+                        category: sadas
+                        description: sadsds
+                        avatar: null
+                        created_at: '2022-06-27T09:27:49.000000Z'
+                        updated_at: '2022-06-27T09:27:49.000000Z'
+                        deleted_at: null
+                      -
+                        id: 3
+                        name: sdsf
+                        price: 10
+                        category: sadas
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-27T10:35:30.000000Z'
+                        updated_at: '2022-06-27T10:35:30.000000Z'
+                        deleted_at: null
+                      -
+                        id: 4
+                        name: sdsf
+                        price: 10
+                        category: sadas
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-27T10:35:46.000000Z'
+                        updated_at: '2022-06-27T10:35:46.000000Z'
+                        deleted_at: null
+                    first_page_url: 'http://localhost/api/products?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/products?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/products?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/products'
+                    per_page: 10
+                    prev_page_url: null
+                    to: 3
+                    total: 3
+                  message: ''
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 2
+                          name: sdsf
+                          price: 10
+                          category: sadas
+                          description: sadsds
+                          avatar: null
+                          created_at: '2022-06-27T09:27:49.000000Z'
+                          updated_at: '2022-06-27T09:27:49.000000Z'
+                          deleted_at: null
+                        -
+                          id: 3
+                          name: sdsf
+                          price: 10
+                          category: sadas
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-27T10:35:30.000000Z'
+                          updated_at: '2022-06-27T10:35:30.000000Z'
+                          deleted_at: null
+                        -
+                          id: 4
+                          name: sdsf
+                          price: 10
+                          category: sadas
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-27T10:35:46.000000Z'
+                          updated_at: '2022-06-27T10:35:46.000000Z'
+                          deleted_at: null
+                      first_page_url: 'http://localhost/api/products?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://localhost/api/products?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://localhost/api/products?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://localhost/api/products'
+                      per_page: 10
+                      prev_page_url: null
+                      to: 3
+                      total: 3
+                  message:
+                    type: string
+                    example: ''
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/{id}':
+    delete:
+      summary: 'Remove the specific Product.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/cart:
+    get:
+      summary: 'Display a Cart of a guest or auth user.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Error in fetching cart.'
+                  data:
+                    session_id:
+                      - 'The session id field is required.'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Error in fetching cart.'
+                  data:
+                    type: object
+                    example:
+                      session_id:
+                        - 'The session id field is required.'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Add specific item to cart for guest and auth user.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gmgxybidkytdvlsgebqdkdueitxtqgfcgfzzczytmalv
+                product_id:
+                  type: number
+                  description: ''
+                  example: 3.5
+                qty:
+                  type: number
+                  description: ''
+                  example: 1851.5
+              required:
+                - session_id
+                - product_id
+                - qty
+      security: []
+  '/api/cart/{id}':
+    put:
+      summary: 'Update the specified Cart Items by CartId.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                qty:
+                  type: number
+                  description: ''
+                  example: 14534089.6
+              required:
+                - qty
+      security: []
+    delete:
+      summary: 'Remove the specified cart item from cart.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the cart.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/auth/login:
+    post:
+      summary: 'Create a new controller instance.'
+      description: "* Default user added\n\nuser: k@yopmail.com\n\nPassword: case@study"
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: modi
+                password:
+                  type: string
+                  description: ''
+                  example: neque
+              required:
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
