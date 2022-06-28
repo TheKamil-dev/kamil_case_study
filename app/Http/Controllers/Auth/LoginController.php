@@ -72,6 +72,9 @@ class LoginController extends Controller
         }
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+
+            Auth::user()->tokens()->delete(); // Delete old tokens if any
+
             $authUser = Auth::user();
             $success['token'] =  $authUser->createToken('MyAuthApp')->plainTextToken;
             $success['name'] =  $authUser->name;

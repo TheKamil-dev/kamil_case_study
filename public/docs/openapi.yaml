@@ -39,23 +39,23 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: iexapcvkszdhxwlcqdeqdkwlrhviueukyioaonoumaxmccao
+                  example: nmjtmhakagulfstmpewjfecwwmxifhkumsqrksvtntjopuefgncliznqxzqvqsdeinpxhzhmcwqytycuwvwasxoiuctuvipulxbogqzbbvebqggiqr
                 price:
                   type: number
                   description: ''
-                  example: 37213452.272934
+                  example: 1967566.95
                 category:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cpxxadahqlfcrsetlttrnlpmwtzaldyqnvrehrpqzgmizpybqegpodkcmfhgwppfpgcfqyejtsrzeqbynktefbvovmgeszojrsyeqfamikkyaberqtkktgefhpqtjkzryxtchbqspqaiqbiwrwbyebqduwnhfgubxungftxpflzrsaznt
+                  example: welcnoeakatwpxakkicbvkgetihcyxpfuwfodumzpluldgmtjlmusbfmizwwlcblzoseumndhavnagmlbwqtuzfdqnkkrwpuhuivtcwizarwwkaecrusuynahntztndlxbatdgyzuxbobvwzrrczlevzltyeubbsqjfdbgytqeamwzfslf
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: iwuccbumrycygecsgrbxqjhtrzmezxtpzvlbcucvuaowrthyqoounmphsyfuyiklfntvlvymqjsqlswrwnrrfjzvdaaemsxxoihojxvemqrwzovdtgqnwbudzonakromvhcyejuryctzhawgnkhkohvcjjfbpeuslwyfmlnreumslyrbvprwzzxqtrpawobakuxmmmzmxqbiqezgnhkhermookrcvglqfcqoujozlcdfuqcsykipfanwoccwxksagctmzzu
+                  example: luoyxphdwzaikmjqnuaoraddtwousyrrwjuvlksjohglbcvzlneyvnhjjisrlckcgstafdkorbmlaekupbuscjaoipdbbcuhodtgrkyugeehizlrlsvnsjrcqgvkeagtsuskkpdqwzqhcnasxfemudzlrkfonwsgcroqaulhnqyimmmmmewnftiimrefovvlrompfnwkstcpqxsltobdpjxvpqvnmtiepruhsibrhzftagrmjemzpuvbtkncieuptcobz
                 avatar:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bftgfjvxqtotoftjxrztcdnzfwd
+                  example: zjbzsgjuocsjqijcokgxcndvilbeagrsewubkruzqrdzjtdjkvqsejfntfrmhktgljgnbdclgdzqt
               required:
                 - name
                 - price
@@ -94,33 +94,83 @@ paths:
                     data:
                       -
                         id: 2
-                        name: sdsf
+                        name: '123456'
                         price: 10
                         category: sadas
-                        description: sadsds
+                        description: fdsf
                         avatar: null
-                        created_at: '2022-06-27T09:27:49.000000Z'
-                        updated_at: '2022-06-27T09:27:49.000000Z'
+                        created_at: '2022-06-27T12:33:01.000000Z'
+                        updated_at: '2022-06-27T12:33:01.000000Z'
                         deleted_at: null
                       -
                         id: 3
-                        name: sdsf
+                        name: '1234568'
                         price: 10
-                        category: sadas
+                        category: abc
                         description: fdsf
                         avatar: null
-                        created_at: '2022-06-27T10:35:30.000000Z'
-                        updated_at: '2022-06-27T10:35:30.000000Z'
+                        created_at: '2022-06-27T12:33:08.000000Z'
+                        updated_at: '2022-06-27T12:33:08.000000Z'
                         deleted_at: null
                       -
                         id: 4
-                        name: sdsf
+                        name: '5698'
                         price: 10
-                        category: sadas
+                        category: abc
                         description: fdsf
                         avatar: null
-                        created_at: '2022-06-27T10:35:46.000000Z'
-                        updated_at: '2022-06-27T10:35:46.000000Z'
+                        created_at: '2022-06-27T12:33:12.000000Z'
+                        updated_at: '2022-06-27T12:33:12.000000Z'
+                        deleted_at: null
+                      -
+                        id: 5
+                        name: '5698'
+                        price: 10
+                        category: abc
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-28T06:38:53.000000Z'
+                        updated_at: '2022-06-28T06:38:53.000000Z'
+                        deleted_at: null
+                      -
+                        id: 6
+                        name: '5698'
+                        price: 10
+                        category: abc
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-28T06:38:58.000000Z'
+                        updated_at: '2022-06-28T06:38:58.000000Z'
+                        deleted_at: null
+                      -
+                        id: 7
+                        name: '5698'
+                        price: 10
+                        category: abc
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-28T06:41:17.000000Z'
+                        updated_at: '2022-06-28T06:41:17.000000Z'
+                        deleted_at: null
+                      -
+                        id: 8
+                        name: '5698'
+                        price: 10
+                        category: abc
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-28T07:29:52.000000Z'
+                        updated_at: '2022-06-28T07:29:52.000000Z'
+                        deleted_at: null
+                      -
+                        id: 9
+                        name: '5698'
+                        price: 10
+                        category: abc
+                        description: fdsf
+                        avatar: null
+                        created_at: '2022-06-28T08:21:24.000000Z'
+                        updated_at: '2022-06-28T08:21:24.000000Z'
                         deleted_at: null
                     first_page_url: 'http://localhost/api/products?page=1'
                     from: 1
@@ -143,8 +193,8 @@ paths:
                     path: 'http://localhost/api/products'
                     per_page: 10
                     prev_page_url: null
-                    to: 3
-                    total: 3
+                    to: 8
+                    total: 8
                   message: ''
                 properties:
                   success:
@@ -157,33 +207,83 @@ paths:
                       data:
                         -
                           id: 2
-                          name: sdsf
+                          name: '123456'
                           price: 10
                           category: sadas
-                          description: sadsds
+                          description: fdsf
                           avatar: null
-                          created_at: '2022-06-27T09:27:49.000000Z'
-                          updated_at: '2022-06-27T09:27:49.000000Z'
+                          created_at: '2022-06-27T12:33:01.000000Z'
+                          updated_at: '2022-06-27T12:33:01.000000Z'
                           deleted_at: null
                         -
                           id: 3
-                          name: sdsf
+                          name: '1234568'
                           price: 10
-                          category: sadas
+                          category: abc
                           description: fdsf
                           avatar: null
-                          created_at: '2022-06-27T10:35:30.000000Z'
-                          updated_at: '2022-06-27T10:35:30.000000Z'
+                          created_at: '2022-06-27T12:33:08.000000Z'
+                          updated_at: '2022-06-27T12:33:08.000000Z'
                           deleted_at: null
                         -
                           id: 4
-                          name: sdsf
+                          name: '5698'
                           price: 10
-                          category: sadas
+                          category: abc
                           description: fdsf
                           avatar: null
-                          created_at: '2022-06-27T10:35:46.000000Z'
-                          updated_at: '2022-06-27T10:35:46.000000Z'
+                          created_at: '2022-06-27T12:33:12.000000Z'
+                          updated_at: '2022-06-27T12:33:12.000000Z'
+                          deleted_at: null
+                        -
+                          id: 5
+                          name: '5698'
+                          price: 10
+                          category: abc
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-28T06:38:53.000000Z'
+                          updated_at: '2022-06-28T06:38:53.000000Z'
+                          deleted_at: null
+                        -
+                          id: 6
+                          name: '5698'
+                          price: 10
+                          category: abc
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-28T06:38:58.000000Z'
+                          updated_at: '2022-06-28T06:38:58.000000Z'
+                          deleted_at: null
+                        -
+                          id: 7
+                          name: '5698'
+                          price: 10
+                          category: abc
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-28T06:41:17.000000Z'
+                          updated_at: '2022-06-28T06:41:17.000000Z'
+                          deleted_at: null
+                        -
+                          id: 8
+                          name: '5698'
+                          price: 10
+                          category: abc
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-28T07:29:52.000000Z'
+                          updated_at: '2022-06-28T07:29:52.000000Z'
+                          deleted_at: null
+                        -
+                          id: 9
+                          name: '5698'
+                          price: 10
+                          category: abc
+                          description: fdsf
+                          avatar: null
+                          created_at: '2022-06-28T08:21:24.000000Z'
+                          updated_at: '2022-06-28T08:21:24.000000Z'
                           deleted_at: null
                       first_page_url: 'http://localhost/api/products?page=1'
                       from: 1
@@ -206,8 +306,8 @@ paths:
                       path: 'http://localhost/api/products'
                       per_page: 10
                       prev_page_url: null
-                      to: 3
-                      total: 3
+                      to: 8
+                      total: 8
                   message:
                     type: string
                     example: ''
@@ -264,7 +364,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 3
+        example: 1
         required: true
         schema:
           type: integer
@@ -346,15 +446,15 @@ paths:
                 session_id:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gmgxybidkytdvlsgebqdkdueitxtqgfcgfzzczytmalv
+                  example: kabqyfwg
                 product_id:
                   type: number
                   description: ''
-                  example: 3.5
+                  example: 30.86653606
                 qty:
                   type: number
                   description: ''
-                  example: 1851.5
+                  example: 248686.942146
               required:
                 - session_id
                 - product_id
@@ -392,7 +492,7 @@ paths:
                 qty:
                   type: number
                   description: ''
-                  example: 14534089.6
+                  example: 25005.730062365
               required:
                 - qty
       security: []
@@ -423,14 +523,14 @@ paths:
         in: path
         name: id
         description: 'The ID of the cart.'
-        example: 1
+        example: 2
         required: true
         schema:
           type: integer
   /api/auth/login:
     post:
       summary: 'Create a new controller instance.'
-      description: "* Default user added\n\nuser: k@yopmail.com\n\nPassword: case@study"
+      description: "* Default user added\n*\nUser: k@yopmail.com\n*\nPassword: case@study"
       parameters:
         -
           in: header
@@ -459,11 +559,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: modi
+                  example: et
                 password:
                   type: string
                   description: ''
-                  example: neque
+                  example: necessitatibus
               required:
                 - email
                 - password

@@ -19,12 +19,27 @@ class OptionalAuth
      */
     public function handle(Request $request, Closure $next)
     {
+        // if ($request->bearerToken()) {
+        //     Auth::setUser(
+        //         Auth::guard('sanctum')->user()
+        //     );
+        // }
         if ($request->bearerToken()) {
-            Auth::setUser(
-                Auth::guard('sanctum')->user()
-            );
-        }
+            try {
+                    Auth::setUser(
+                        Auth::guard('sanctum')->user()
+                    );
+            } catch (\Throwable $e) {
 
+                $response = [
+                    'success' => false,
+                    'message' => 'Token is Invalid!',
+                ];
+
+                return response()->json($response, 404);
+
+            }
+        }
         return $next($request);
     }
 }

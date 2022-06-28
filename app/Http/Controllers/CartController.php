@@ -19,7 +19,6 @@ class CartController extends Controller
     {
 
 
-
         if( Auth::user())
         {
             $cart = Cart::where('user_id', Auth::user()->id)->get();
@@ -64,7 +63,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $rules = [
             'session_id' => ['required','max:255'],
 
@@ -77,13 +76,12 @@ class CartController extends Controller
             return $this->sendError('Error in creating cart.', $validator->errors());
         }
 
-        $user_id = 0;
+        $user_id = 0; // default 0 for gust use, we can update this later while logged in using session id.
 
+        // if user is authenticated set user id for cart items.
         if(Auth::check())
         {
-
             $user_id = Auth::user()->id;
-
         }
 
         $data = Cart::create([
@@ -140,8 +138,6 @@ class CartController extends Controller
         if($validator->fails()) {
             return $this->sendError('Error in updating cart.', $validator->errors());
         }
-
-
 
 
         $data = Cart::find($id);
